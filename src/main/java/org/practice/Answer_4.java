@@ -31,7 +31,7 @@ class B extends A{
         System.out.println("Class B hidden var: "+x);
     }
 }
-public class Problem4 {
+public class Answer_4 {
     public static void main(String[] args) {
       var obj=  new B(25);
       obj.setX(45);

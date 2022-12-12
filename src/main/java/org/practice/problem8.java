@@ -44,7 +44,6 @@ class customer{
 public class problem8 {
 
     public static void main(String[] args) {
-       // new customer(new Printer(10),"HP XP").engine();
-
+       new customer(new Printer(10),"HP XP").engine();
     }
 }

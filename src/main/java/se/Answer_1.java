@@ -24,10 +24,10 @@ class Department extends University{
     }
 }
 //multi-level inheritance
-class Student extends Department{
+class Students extends Department{
     public final Integer sId=1925102002;
     public final String StudentName="Durjoy Acharya";
-    public Student(String universityName, String location, String departmentName) {
+    public Students(String universityName, String location, String departmentName) {
         super(universityName, location, departmentName);
 
     }
@@ -79,7 +79,7 @@ public class Answer_1 {
 
     public static void Multi_Level_Inheritance(){
         System.out.println("Multi-level-Inheritance");
-        var student=new Student("City University","Khagan,Biruliya,Savar","CSE");
+        var student=new Students("City University","Khagan,Biruliya,Savar","CSE");
         System.out.println(student.StudentName);
         System.out.println(student.sId);
         System.out.println(student.getUniversityName());

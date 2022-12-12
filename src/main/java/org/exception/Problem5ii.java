@@ -45,6 +45,5 @@ public class Problem5ii {
         if (n==0)
             return;
         else nested(n++);//stackoverflow error
-
     }
 }

@@ -12,12 +12,9 @@ class Thread1 extends Thread {
 }
 class Thread2 extends Thread {
     public static void setTimeOut(int delay) throws InterruptedException {
-       // while (true) {
             sleep(delay);
             System.out.println("Thread-2");
         System.out.println(getAllStackTraces().getClass());
-
-        //}
     }
 }
 public class Problem7 {

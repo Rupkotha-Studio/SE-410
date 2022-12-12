@@ -5,7 +5,6 @@ package org.practice;
 
 public class Banking {
     private int balance=500;
-
     public void deposit(int amount){
         this.balance=amount;
     }
@@ -15,11 +14,9 @@ public class Banking {
         if (balance>500)
             balance-=amount;
     }
-
     public void getBalance() {
         System.out.println("Balance "+balance);
     }
-
     public static void main(String[] args) {
         var ob=new Banking();
         ob.deposit(1000);

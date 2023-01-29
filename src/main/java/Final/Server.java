@@ -7,6 +7,7 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Date;
+import java.util.stream.IntStream;
 
 public class Server {
     private static final int port=8989;
@@ -25,10 +26,23 @@ public class Server {
         out = new PrintWriter(clientSocket.getOutputStream(), true);
         in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
         String greeting = in.readLine();
-        if ("give me date time".equals(greeting))
-            out.println(new Date().toString());
+        if (isPalindromeUsingIntStream(greeting))
+            out.println("Plaindom String ");
         else
-            out.println("unrecognised greeting");
+            out.println("unrecognised");
+    }
+    public void plainDomChecker(int port) throws IOException {
+        start(port);
+        out = new PrintWriter(clientSocket.getOutputStream(), true);
+        in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+        String greeting = in.readLine();
+
+
+    }
+    public boolean isPalindromeUsingIntStream(String text) {
+        String temp  = text.replaceAll("\\s+", "").toLowerCase();
+        return IntStream.range(0, temp.length() / 2)
+                .noneMatch(i -> temp.charAt(i) != temp.charAt(temp.length() - i - 1));
     }
 
     public static void main(String[] args) throws IOException {

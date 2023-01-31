@@ -1,16 +1,12 @@
 package Final;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
-import java.net.ServerSocket;
 
-public class UDP_Server_14 {
+public class UDP_Server_16 {
 
-    public UDP_Server_14() throws IOException {
+    public UDP_Server_16() throws IOException {
         startServer();
     }
     void startServer() throws IOException {
@@ -51,6 +47,6 @@ public class UDP_Server_14 {
     }
 
     public static void main(String[] args) throws IOException {
-        new UDP_Server_14();
+        new UDP_Server_16();
     }
 }

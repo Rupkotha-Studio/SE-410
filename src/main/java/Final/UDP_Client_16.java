@@ -3,18 +3,16 @@ package Final;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
-import java.net.Socket;
 
 /**
  * Write a client-server program using UDP socket. Client send list of N numbers to server
  * and server respond the sum of N numbers.
  */
 
-public class UDP_Client_14 {
+public class UDP_Client_16 {
     void startConnection() throws IOException {
         BufferedReader inFromUser =
                 new BufferedReader(
@@ -54,6 +52,6 @@ public class UDP_Client_14 {
     }
 
     public static void main(String[] args) throws IOException {
-        new UDP_Client_14().startConnection();
+        new UDP_Client_16().startConnection();
     }
 }

@@ -28,7 +28,7 @@ public class Client {
     public static void main(String[] args) throws IOException {
         var client=new Client();
         client.startConnection(ip,port);
-        var response=client.sendMessage("give me date time");
+        var response=client.sendMessage("madam");
         System.out.println(response);
     }
 }

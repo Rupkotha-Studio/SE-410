@@ -26,18 +26,19 @@ public class Server {
         out = new PrintWriter(clientSocket.getOutputStream(), true);
         in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
         String greeting = in.readLine();
-        if (isPalindromeUsingIntStream(greeting))
-            out.println("Plaindom String ");
+        if ("give me date time".equals(greeting))
+            out.println(new Date().toString());
         else
-            out.println("unrecognised");
+            out.println("unrecognised greeting");
     }
     public void plainDomChecker(int port) throws IOException {
         start(port);
         out = new PrintWriter(clientSocket.getOutputStream(), true);
         in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
         String greeting = in.readLine();
-
-
+        if (isPalindromeUsingIntStream(greeting))
+            out.println("PlainDrom Text");
+        else out.println("Unrecognize text");
     }
     public boolean isPalindromeUsingIntStream(String text) {
         String temp  = text.replaceAll("\\s+", "").toLowerCase();
@@ -46,6 +47,8 @@ public class Server {
     }
 
     public static void main(String[] args) throws IOException {
-        new Server().getTimeDateInfoFromServer(port);
+        //new Server().getTimeDateInfoFromServer(port);
+        new Server().plainDomChecker(port);
+
     }
 }

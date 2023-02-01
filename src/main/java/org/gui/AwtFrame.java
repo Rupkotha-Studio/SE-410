@@ -21,9 +21,7 @@ public class AwtFrame extends Frame{
         setLayout(null);
         setBackground(Color.BLUE);
         add(new Button("Click Me"));
-        setVisible(true);
-
-    }
+        setVisible(true); }
     public static void main(String[] args) {
         new AwtFrame("SE-412");
     }
@@ -51,6 +49,7 @@ class Circles extends JFrame {
         g.drawString(s,xpos+(diameter/2)-(s.length()/2),ypos+(diameter/2));
     }
     public static void main(String[] args) {
-        new Circles();
+      new Circles();
+      //  new AwtFrame("Advanced Java");
     }
 }

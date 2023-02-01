@@ -14,7 +14,7 @@ class Thread2 extends Thread {
     public static void setTimeOut(int delay) throws InterruptedException {
             sleep(delay);
             System.out.println("Thread-2");
-        System.out.println(getAllStackTraces().getClass());
+        System.out.println("RIP.....");
     }
 }
 public class Problem7 {
